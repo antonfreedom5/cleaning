@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Users</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        h3 {
+            text-align: center;
+            margin-top: 30px;
+        }
+        a {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<h3>Домашний клининг</h3>
+<div class="container my-5 d-flex justify-content-center">
+    <a th:href="@{/client}" class="btn btn-primary">Клиенты</a>
+    <a th:href="@{/driver}" class="btn btn-primary">Водители</a>
+    <a th:href="@{/order}" class="btn btn-primary">Заказы</a>
+    <a th:href="@{/status}" class="btn btn-primary">Статусы</a>
+</div>
+</body>
+</html>

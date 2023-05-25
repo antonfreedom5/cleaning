@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Редактирование статуса</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div class="container my-5">
+    <h2 class="mb-5">Редактирование статуса</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <form action="#" th:action="@{/status/update/{id}(id=${status.id})}" th:object="${status}" method="post">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="name" class="col-form-label">Название</label>
+                        <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Name" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" class="btn btn-primary" value="Сохранить" style="margin-right: 10px">
+                    <a href="/status" class="btn btn-danger">Отмена</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

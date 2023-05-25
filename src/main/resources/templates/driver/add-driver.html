@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Добавление водителя</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div class="container my-5">
+    <h2 class="mb-5">Водители</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <form action="#" th:action="@{/driver/add-item}" th:object="${driver}" method="post">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="firstName" class="col-form-label">Имя</label>
+                        <input type="text" th:field="*{firstName}" class="form-control" id="firstName" placeholder="Имя" required>
+                        <label for="lastName" class="col-form-label">Фамилия</label>
+                        <input type="text" th:field="*{lastName}" class="form-control" id="lastName" placeholder="Фамилия" required>
+                        <label for="phone" class="col-form-label">Телефон</label>
+                        <input type="text" th:field="*{phone}" class="form-control" id="phone" placeholder="Телефон" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" class="btn btn-primary" value="Добавить водителя" style="margin-right: 10px">
+                    <a href="/driver" class="btn btn-danger">Отмена</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
