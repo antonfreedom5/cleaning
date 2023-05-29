@@ -3,20 +3,19 @@ package com.example.cleaning.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 import static jakarta.persistence.GenerationType.AUTO;
 
 @Entity(name = "client_order")
-
 public class Order {
     @Id
     @GeneratedValue(strategy = AUTO)
     private Long id;
-    @OneToOne
+    @ManyToOne
     private Client client;
-    @OneToOne
+    @ManyToOne
     private Driver driver;
-    @OneToOne
+    @ManyToOne
     private Status status;
 
     public Order() {
